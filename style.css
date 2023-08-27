@@ -73,7 +73,7 @@ animation-delay: 0.5s;
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url("images/bg.JPG");
+    background: url("images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -227,7 +227,8 @@ animation: slideTop 0.5s ease forwards;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
-    background-image: url("images/bg.JPG");
+    background-image: url("images/bg.jpg");
+    /* yahan ka caps */
 }
 .scontainer{
    padding: 90px;
