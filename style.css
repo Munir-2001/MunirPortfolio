@@ -497,7 +497,7 @@ min-height: 40%;
     display: flex;
     margin-top: 0rem;
     padding: 4rem 4rem;
-
+    justify-content: center;
 }
 .achievements-section {
     padding: 50px;
