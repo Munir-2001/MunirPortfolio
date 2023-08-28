@@ -279,7 +279,7 @@ box-shadow: 0.2rem 0.2rem 1rem rgb(87, 34, 147),
 .read{
     display: inline-block;
     background: #0ef;
-    padding: 0.4rem 0.6rem;
+    padding: 1rem 1rem;
     border-radius: 15%;
     color: black;
     letter-spacing: 0.01rem;
