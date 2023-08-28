@@ -226,7 +226,7 @@ animation: slideTop 0.5s ease forwards;
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     background: url("images/bg.JPG");
     /* yahan ka caps */
 }
@@ -302,3 +302,23 @@ box-shadow: 0.2rem 0.2rem 1rem rgb(87, 34, 147),
     transform: translate3d(+10px, -10px, +20px);
 }
 
+.Contact{
+    background: url("images/blueconcrete.jpg");
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left: 4rem;
+    margin-top: 0rem;
+    /* background-color: purple; */
+    padding: 4rem;
+    
+}
+.contactclass h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+.contactclass h2 span{
+    color: #0ef;
+}
