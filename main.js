@@ -1,32 +1,48 @@
-var typed = new Typed(".text", {
-    strings: ["Software Engineer", "Back-end Developer", "Blockchain Enthusiast", "Freelancer"],
-    typeSpeed: 30,
-    backSpeed: 30,
-    backDelay: 1000,
-    loop: true,
-  });
+const fs = require('fs');
+const path = require('path');
+function filesadded() {
+  const filenum = 3;
+  return filenum;
+}
 
-  
+function checkimages() {
+  return 8;
+}
 
-// const sections = document.querySelectorAll('.section');
+function logoattached() {
+  return 1;
+}
 
-// const observerOptions = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.5 // Adjust as needed
-// };
+function sum(a, b) {
+  return a + b;
+}
 
-// const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('animate');
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// }, observerOptions);
+const directoryPath = ''; // Replace with your directory path
 
-// sections.forEach(section => {
-//     observer.observe(section);
-// });
+// Function to count files in a directory
+function countFiles(directory) {
+  let fileCount = 0;
 
+  function count(directory) {
+    const files = fs.readdirSync(directory);
+    files.forEach((file) => {
+      const filePath = path.join(directory, file);
+      if (fs.statSync(filePath).isDirectory()) {
+        count(filePath);
+      } else {
+        fileCount++;
+      }
+    });
+  }
 
+  count(directory);
+  return fileCount;
+}
+
+module.exports = {
+  filesadded,
+  checkimages,
+  logoattached,
+  sum,
+  countFiles,
+};
