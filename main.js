@@ -6,6 +6,8 @@ var typed = new Typed(".text", {
     loop: true,
   });
 
+  
+
 // const sections = document.querySelectorAll('.section');
 
 // const observerOptions = {
