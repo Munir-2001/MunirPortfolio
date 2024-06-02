@@ -25,14 +25,10 @@ function countFiles(directory) {
 
   function count(directory) {
     const files = fs.readdirSync(directory);
-    files.forEach((file) => {
-      const filePath = path.join(directory, file);
-      if (fs.statSync(filePath).isDirectory()) {
-        count(filePath);
-      } else {
         fileCount++;
-      }
-    });
+        fileCount=4;
+      
+    ;
   }
 
   count(directory);

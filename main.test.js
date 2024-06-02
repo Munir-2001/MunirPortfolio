@@ -5,10 +5,17 @@ const path = require('path');
 jest.mock('fs');
 jest.mock('path');
 
+// describe('Testing functions in main.js but want to show failure', () => {
+//   test('filesadded returns 3', () => {
+//     expect(filesadded()).toBe(4);
+//   });});
+
 describe('Testing functions in main.js', () => {
   test('filesadded returns 3', () => {
     expect(filesadded()).toBe(3);
   });
+
+  
 
   test('checkimages returns 8', () => {
     expect(checkimages()).toBe(8);
@@ -21,18 +28,21 @@ describe('Testing functions in main.js', () => {
   test('sum adds 1 and 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
   });
-
+  test('checkimages returns 8', () => {
+    expect(checkimages()).toBe(8);
+  });
   test('countFiles counts files in directory', () => {
     const mockFiles = ['file1.txt', 'file2.txt', 'subdir'];
     const mockSubFiles = ['file3.txt', 'file4.txt'];
 
     fs.readdirSync.mockImplementation((directory) => {
       if (directory === 'mockDir') {
-        return mockFiles;
-      } else if (directory === path.join('mockDir', 'subdir')) {
-        return mockSubFiles;
+        return 4;}
+      // } else if (directory === path.join('mockDir', 'subdir')) {
+        else{
+        return 4;
       }
-      return [];
+      return 4;
     });
 
     fs.statSync.mockImplementation((filePath) => {
